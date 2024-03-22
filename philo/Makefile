@@ -6,7 +6,7 @@
 #    By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 19:17:58 by alermolo          #+#    #+#              #
-#    Updated: 2024/03/12 14:11:06 by alermolo         ###   ########.fr        #
+#    Updated: 2024/03/22 11:57:54 by alermolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SOURCES 	=		srcs/main.c			\
 					srcs/routine.c	\
 					srcs/death_check.c	\
 					srcs/eat_sleep.c	\
+					srcs/time.c
 
 #--compilator------------------------------------------------------------------#
 

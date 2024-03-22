@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:05:17 by alermolo          #+#    #+#             */
-/*   Updated: 2024/03/18 16:23:28 by alermolo         ###   ########.fr       */
+/*   Updated: 2024/03/22 11:44:24 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ int	philo_eat(t_phils *phil)
 	if (phil->prev_meal == -1)
 		return (-1);
 	phil->num_of_meals++;
-	ft_usleep(phil->table->time_to_eat, phil);
+	usleep(phil->table->time_to_eat * 1000);
+	// ft_usleep(phil->table->time_to_eat, phil);
 	pthread_mutex_lock(phil->fork_r_mtx);
 	*phil->fork_r = 0;
 	pthread_mutex_unlock(phil->fork_r_mtx);

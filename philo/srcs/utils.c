@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:48:19 by alermolo          #+#    #+#             */
-/*   Updated: 2024/03/18 15:59:48 by alermolo         ###   ########.fr       */
+/*   Updated: 2024/03/22 11:57:37 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,33 +74,4 @@ long	ft_atol(const char *s)
 		i++;
 	}
 	return (res * sign);
-}
-
-long	time_diff(struct timeval start)
-{
-	struct timeval	current_time;
-	long			diff;
-
-	if (gettimeofday(&current_time, NULL))
-	{
-		printf("Error: gettimeofday failed\n");
-		return (-1);
-	}
-	diff = (current_time.tv_sec - start.tv_sec) * 1000
-		+ (current_time.tv_usec - start.tv_usec) / 1000;
-	return (diff);
-}
-
-int	ft_usleep(size_t time, t_phils *phil)
-{
-	size_t	start;
-
-	start = time_diff((struct timeval){0, 0});
-	while (time_diff((struct timeval){0, 0}) - start < time)
-	{
-		if (philo_died(phil))
-			return (0);
-		usleep(500);
-	}
-	return (0);
 }
