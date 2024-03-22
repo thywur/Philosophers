@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:20:09 by alermolo          #+#    #+#             */
-/*   Updated: 2024/03/18 16:31:19 by alermolo         ###   ########.fr       */
+/*   Updated: 2024/03/22 11:27:36 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void	*routine(void *data)
 			ft_usleep(phil->table->time_to_die, phil);
 	}
 	while ((phil->table->meal_limit == -1
-		|| phil->num_of_meals < phil->table->meal_limit)
-		&& !philo_died(phil))
+			|| phil->num_of_meals < phil->table->meal_limit)
+			&& !philo_died(phil))
 	{
 		if (philo_eat(phil) == -1)
 			return (NULL);
